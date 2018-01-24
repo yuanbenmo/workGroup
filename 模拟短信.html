@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#nowBox{
+			background: url(img/bg.jpg) no-repeat left;
+			width: 320px;
+		}
+		#box{
+			height: 400px;
+			width: 300px;
+			border: 1px solid red;
+			background: white;
+			position: relative;
+			overflow: auto;
+		}
+		
+		#box ul li{margin-top: 17px;
+    height: auto;
+    overflow: hidden;}
+		#box1{
+			overflow: hidden;
+		}
+		.ull img{float: left;margin-left: 10px;}
+		.ull {margin-bottom: 20px;display: block;}
+		.ull .stxt{width: 200px;height: auto;float: left;color: #fff;line-height: 25px;
+padding: 5px 10px 5px 10px;background-color: gray;margin-left: 10px;border-radius: 5px;}
+
+
+		.ulr img{float: right;margin-right: 10px;}
+		.ulr {margin-bottom: 20px;display: block;}
+		.ulr .stxt{width: 200px;height: auto;float: right;color: #fff;line-height: 25px;
+padding: 5px 10px 5px 10px;background-color: gray;margin-right: 10px;border-radius: 5px;}
+
+		div,ul,li{padding: 0;margin: 0;list-style: none;}
+		
+	</style>
+	<body>
+		<div id="nowBox">
+			<div id="box">
+				<ul id="ul">
+					<!--<li class="ull"><img src="img/rico.png"><div class="stxt">输入的内容。。。</div></li>
+					<li class="ulr"><img src="img/rico.png"><div class="stxt">输入的内容。。。</div></li>-->
+				</ul>
+			</div>
+			<div id="box1">
+				<img src="img/lico.png " height="40" width="35" id="img">
+				<input type="text"  id="b1"/>
+				<input type="button" value="发送" id="btn"/>
+			</div>
+		</div>
+		
+		<script>
+			let box = document.getElementById('box')
+			let img = document.getElementById('img')
+			let b1 = document.getElementById('b1')
+			let btn = document.getElementById('btn')
+			let Oul = document.getElementById('ul')
+			
+			
+			
+			
+			let onOff=true
+			
+			img.onclick=function(){
+				if(onOff){
+					img.src='img/rico.png'
+					onOff=false
+				}
+				else{
+					img.src='img/lico.png'
+					onOff=true
+				}
+			}
+			
+			btn.onclick=function(){
+				
+				if(b1.value==''){
+					alert('文本不可以为空')
+					
+				}else if(onOff){
+				
+				
+				
+				 Oul.innerHTML='<li class="ull"><img src="img/lico.png"/><div class="stxt">'+b1.value+'</div></li>'+Oul.innerHTML;
+
+					b1.value='';
+				
+				}else{
+					
+				 Oul.innerHTML='<li class="ulr"><img src="img/rico.png"/><div class="stxt">'+b1.value+'</div></li>'+Oul.innerHTML;
+
+					b1.value='';
+				}
+			}
+		</script>
+		
+	</body>
+</html>

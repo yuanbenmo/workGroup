@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <title>1.图片切换</title>
+        <style type="text/css">
+                body { margin: 0; padding: 0; font-family:"微软雅黑";}
+                button {margin: 0; padding: 0;position: relative; left: 45%; top: 60px; margin-right: 30px;}
+                #span2 { margin: 0; padding: 0;position: relative; left: 32%; top: 90px; }
+                #wrap { width: 600px; height: 400px;  margin: 100px auto;
+                 border-top: 10px solid dodgerblue; 
+                 border-left: 10px solid darkred; 
+                 border-right: 10px solid yellowgreen; 
+                 border-bottom: 10px solid blue; 
+                 background: #F9F7F7; position: relative;}
+                #wrap a { text-decoration: none; width: 40px; height: 40px; display:block; font-size: 20px; font-weight: bold; background: #F99797; text-align:center; line-height: 40px; color: #000;}
+                #wrap a:hover { fifter: alpha(opacity:90); opacity: 0.9; }
+                #prev, #next { position: absolute; top: 40%; fifter: alpha(opacity:60); opacity:0.6;}
+                #prev { float: left; left: 20px;}
+                #next { float: right; right: 20px;}
+                #wrap p, #wrap span { background: #000; width: 600px; height: 40px; color:#FFF; line-height: 40px; text-align: center; fifter: alpha(opacity:80); opacity: 0.8;} 
+                #wrap p { position: absolute; bottom: 0; margin: 0;}
+                #wrap span { position: absolute; top: 0; display: inline-block; }
+                #wrap img {  width: 600px; height: 400px;}
+                #wenzi{text-align: center;}
+        </style>
+        
+</head>
+
+<body>
+
+<button id="loop">循环切换</button>
+<button id="sequence">顺序切换</button>
+
+<span id="span2">图片可从最后一张跳转到第一张循环切换</span>
+<div id="wrap">
+        
+    <a href="javascript:;" id="prev"><</a>
+    <a href="javascript:;" id="next">></a>
+    <p id="text">图片文字</p>
+   
+    <span id="span1">数量</span>
+    <img id="img1" >
+</div>
+<script>
+	var btn  = document.getElementsByTagName('button');
+	var prev = document.getElementById('prev');
+	var next = document.getElementById('next');
+	var texts = document.getElementById('text');
+	var img1 = document.getElementById('img1');
+	var span1 = document.getElementById('span1');
+	var span2 = document.getElementById('span2');
+	
+	var num = 0;
+	var arrimg1Src=['img/novak-ao.jpg','img/novak-fr.jpg','img/novak-en.jpg','img/novak-an.jpg'];
+	var arrtexts=['novak-ao','novak-fr','novak-en','novak-an'];
+	
+	var onOff=true;
+	
+	btn[0].onclick=function(){onOff=true; span2.innerHTML='图片可从最后一张跳转到第一张循环切换'};
+	btn[1].onclick=function(){onOff=false; span2.innerHTML='图片只能到最后一张或只能到第一张切换'};
+	
+	function df(){
+		img1.src=arrimg1Src[num];
+		texts.innerHTML=arrtexts[num];
+		span1.innerHTML=num+1+'/'+arrtexts.length
+	}
+	df();
+	
+	prev.onclick=function(){
+		num--;
+		if(num == -1){
+			if(onOff){
+				num=arrimg1Src.length-1;
+				
+			}else{
+				num=0;
+				alert('这已经是第一张了');
+				
+			}
+		}
+		df();
+	};
+	
+	next.onclick=function(){
+		num++;
+		if(num == arrimg1Src.length){
+			if(onOff){
+				num=0;
+				
+			}else{
+				num=arrimg1Src.length-1;
+				alert('这已经是最后一张了')
+				
+			}
+		}
+		df();
+	}
+	
+	
+</script>
+</body>
+</html>

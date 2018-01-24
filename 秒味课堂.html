@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#box{width: 300px;height:500px;margin: 0 auto;}
+		#box1{text-align: center;width: 300px;line-height: 50px;background: yellowgreen;}
+		#box2{text-align: center;width: 300px;line-height: 50px;background: deepskyblue;margin-top: 10px;}
+		#conts{display: none;}
+		#cont2{display: none;}
+	</style>
+	<body>
+		<div id="box">
+			<div id="box1">妙味课堂</div>
+			<div id="box2">
+				<div id="cont">
+					<span id="span1">欢迎来到妙味课堂1</span><span><img src="img/bi.png" id="img"></span>
+				</div>
+				<div id="conts">
+					<input type="text" id="inputs"/><input type="button" value="确定" id="btn1"/><input type="button" value="取消" id="btn2"/>
+				</div>
+			</div>
+			<div id="box2">
+				<div id="cont1">
+					<span id="span2">欢迎来到妙味课堂2</span><span><img src="img/bi.png" id="imgs"></span>
+				</div>
+				<div id="cont2">
+					<input id="inputsd"/><input type="button" value="确定" id="btn3"/><input type="button" value="取消" id="btn4"/>
+				</div>
+			</div>
+		</div>
+		<script>
+			var cont =document.getElementById('cont');
+			var conts =document.getElementById('conts');
+			var span1 =document.getElementById('span1');
+			var img =document.getElementById('img');
+			var imgs =document.getElementById('imgs');
+			var inputs =document.getElementById('inputs');
+			var btn1 =document.getElementById('btn1');
+			var btn2 =document.getElementById('btn2');
+			var btn3 =document.getElementById('btn3');
+			var btn4 =document.getElementById('btn4');
+			   
+			img.onclick=function(){
+				cont.style.cssText='display:none';
+				conts.style.cssText='display:block';
+			}
+			imgs.onclick=function(){
+				cont1.style.cssText='display:none';
+				cont2.style.cssText='display:block';
+			}
+			btn1.onclick=function(){
+				if(inputs.value==''){
+					alert('请输入点什么吧');
+				}else{
+					span1.innerText=inputs.value;
+					cont.style.cssText='display:block';
+				    conts.style.cssText='display:none';
+				    inputs.value='';
+				};
+				
+			}
+			btn2.onclick=function(){
+				cont.style.cssText='display:block';
+				conts.style.cssText='display:none';
+			}
+			
+			btn3.onclick=function(){
+				if(inputsd.value==''){
+					alert('请输入点什么吧');
+				}else{
+					span2.innerText=inputsd.value;
+					cont1.style.cssText='display:block';
+				    cont2.style.cssText='display:none';
+				    inputsd.value='';
+				};
+				
+			}
+			btn4.onclick=function(){
+				cont1.style.cssText='display:block';
+				cont2.style.cssText='display:none';
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#box{
+			width: 200px;
+			height: 600px;
+			margin: 20px auto;
+			position: relative;
+			overflow: hidden;
+		}
+		#box1{
+			height: 500px;
+			overflow: hidden;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top:56px;
+			left: 0;
+			
+		}
+		button{
+			width: 200px;
+			text-align: center;
+			line-height: 50px;
+			background: burlywood;
+			position: absolute;
+		}
+		button:nth-of-type(1){
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 99;
+		}
+		button:nth-of-type(2){
+			position: absolute;
+			bottom: 0;
+			left:0;
+			z-index: 99;
+		}
+		#ul li{
+			list-style-type: none;
+		}
+		#ul li{
+			width: 200px;
+			height: 100px;
+			background: cyan;
+		}
+		#ul li:nth-of-type(2n){
+			
+			background: yellowgreen;
+		}
+	</style>
+	<body>
+		<div id="box">
+			<button>向上点击</button>
+			<div id="box1">
+				<ul id="ul">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<button>向下点击</button>
+		</div>
+		<script>
+			var btns = document.querySelectorAll('button');
+			var box1 = document.getElementById('box1');
+			var ul = document.getElementById('ul');
+			var lis = ul.querySelectorAll('li');
+			
+			let num =0;
+			let timer  =null;
+			
+			btns[0].onmousedown = function(){
+			
+				timer = setInterval(function(){
+					
+		            num++;
+		           if(){
+						
+					}
+		            ul.style.top=-num+'px'
+		        },50)
+			
+			}
+			btns[0].onmouseup = function(){
+				clearInterval(timer)
+			}
+			btns[1].onmousedown = function(){
+			
+				timer = setInterval(function(){
+		            num--;
+		            ul.style.top=-num+'px'
+		            //ul.style.transition = '.5'
+		           
+		        },50)
+				
+			}
+			btns[1].onmouseup = function(){
+				clearInterval(timer)
+			}
+			//长按按钮移除后还会自己上下动，写了下面的代码后会解决这个问题
+		
+			document.onmouseup = function(){
+				clearInterval(timer)
+			}
+		</script>
+	</body>
+</html>

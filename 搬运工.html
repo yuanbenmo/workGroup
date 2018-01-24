@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#box{
+			width: 1000px;
+			height: 400px;
+			background: #1E90FF;
+			margin: 30px auto;
+			
+			padding-top: 50px;
+		}
+		#box input:nth-of-type(1){
+			margin-left: 150px;
+		}
+		#box input:nth-of-type(2){
+			width: 100px;
+			line-height: 50px;
+			background: #00BFFF;
+		}
+		#box input:nth-of-type(1),#box input:nth-of-type(3){
+			height: 300px;
+			width: 300px;
+		}
+	</style>
+	<body>
+		<div id="box">
+			<input type="text" />
+			<input type="button" value="文字向左移动"/>
+			<input type="text" />
+		</div>
+		<script>
+			const box = document.getElementById('box');
+			const inputs = box.querySelectorAll('input');
+			 
+			var timer=null;
+			let str = '';
+			let num= 0;
+			inputs[1].onclick = function(){
+				
+				if(inputs[0].value===''){
+					return;
+				}
+				inputs[2].value='';
+				
+				timer=setInterval(function(){
+						str=inputs[0].value.split('')[num];
+						inputs[0].value=inputs[0].value.split(str).join('');
+						inputs[2].value += str  ;
+					if(inputs[0].value===''){
+					clearInterval(timer);
+				}	
+						
+				},50)
+				
+				}
+		</script>
+	</body>
+</html>
