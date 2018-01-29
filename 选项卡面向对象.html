@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+.active{
+    background: yellow;
+}
+div.show{
+    display: block;
+}
+div{
+    width:150px;
+    height: 150px;
+    border: 1px solid #000;
+    display: none;
+}
+
+</style>
+<body>
+        <button type="button" class="active">按钮一</button>
+        <button type="button">按钮二</button>
+        <button type="button">按钮三</button>
+        <div class="show">111111</div>
+        <div>222222</div>
+        <div>33333</div>
+    <script>
+        function Tab(){
+            this.btns=document.getElementsByTagName('button');
+            this.divs=document.getElementsByTagName('div');
+            this.timer = null;
+            this.num = 0;
+        };
+        Tab.prototype.Even=function(type='onclick'){
+            let that = this; 
+            for(let i=0;i<this.btns.length;i++){
+                this.btns[i][type]=function(){
+                 that.changtab(i)
+                }
+            }
+            
+        }
+        Tab.prototype.changtab = function(index){
+            for(let i=0;i<this.btns.length;i++){
+                this.btns[i].classList.remove('active');
+                this.divs[i].classList.remove('show');
+            }
+            this.btns[index].classList.add('active');
+            this.divs[index].classList.add('show')
+        }
+        Tab.prototype.autoplay = function(){
+            this.timer=setInterval(()=>{
+                this.num++
+                this.num%=this.btns.length;
+                this.changtab(this.num)
+            },1000)
+        }
+        let t = new Tab;
+        t.Even();
+        t.autoplay();
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*要理解闭包就要理解js特殊的变量作用域*/
+			
+			//闭包就是能够读取其他函数内部变量的函数
+			
+			//变量的作用域无非就是全局变量和局部变量
+			//全局变量
+			var n=99;
+			function fn(){
+				console.log(n);
+			}
+			fn();//99
+			
+			//因为n是局部变量，全局拿不到
+			function fn1(){
+				var n=99;
+			}
+			console.log(n);//error
+			
+			//这里有一个地方需要注意，函数内部声明变量的时候，一定要用var命令，如果不用的话，你实际上声明了一个全局变量
+			function fn2(){
+				n=99
+			}
+			fn2();
+			console.log(n);//99
+			//二：如何从外部读取局部变量？只有在函数内部再定义一个函数
+			function fn3(){
+				var n=99;
+				function fn4(){
+					console.log(n);//99
+				}
+			}
+			
+			//闭包
+			function fn5(){
+				var n=99;
+				function fn6(){
+					console.log(n);//99
+				}
+				return fn6;
+			}
+			var result = fn5();
+			
+			result()//99
+			//fn6函数就是 闭包,在js语言中，只有函数内部的子函数才能读取局部变量，因此可以吧闭包简单理解成‘定义在一个函数内部的函数’
+			
+			//思考题
+			var name = 'the window';
+			var object={
+				name:'my object',
+				fucn:function(){
+					return function(){
+						return this.name;
+					}
+				}
+			}
+			console.log(object.fucn()());//the window
+			
+			
+			var name = 'the window';
+			var object={
+				name:'my object',
+				fucn:function(){
+					var that = this//改变指向
+					return function(){
+						return that.name;
+					}
+				}
+			}
+			console.log(object.fucn()());//my object
+		</script>
+	</body>
+</html>
