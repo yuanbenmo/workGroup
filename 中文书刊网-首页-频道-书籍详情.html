@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".write").hide();
+			$(function () {
+				$(window).scroll(function(){
+			if ($(window).scrollTop()>100){
+			$(".write").fadeIn(500);
+			}
+			else
+			{
+			$(".write").fadeOut(500);
+			}
+			});
+			$(".write").click(function(){
+			$('body,html').animate({scrollTop:0},100);
+			return false;
+			});
+			});
+			});
+		</script>
+		<link href="css/bootstrap.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<title>中文书刊网-首页-频道-书籍详情</title>
+	</head>
+	<body>
+		<section class="container">
+			<header class="header">
+				<h1 class="logo">
+					<a href="#">
+						<img src="img/logo.png">
+					</a>
+				</h1>
+				<ul id="nav">
+					<li class="nav-one"><a href="/" style="background: url(../img/index/user.png) no-repeat;">首页</a></li>
+					<li class="nav-two"><a href="中文书刊网-导读.html" style="background: url(../img/index/eye.png) no-repeat;">导读</a></li>
+					<li class="nav-three"><a href="中文书刊网-故事.html" style="background: url(../img/indexgushilin.png) no-repeat;">故事</a></li>
+					<li class="nav-four"><a href="中文书刊网-频道.html" style="background: url(../img/index/feiji.png) no-repeat;">频道</a></li>
+					<li class="nav-five"><a href="中文书刊网-专题.html" style="background: url(../img/index/pen.png) no-repeat;">专题专栏</a></li>
+				</ul>
+				<form method="get" class="search-form" action="">
+					<input class="form-control" name="s" type="text" placeholder="输入关键字" value=""><input class="btn" type="submit" value="搜索">
+				</form>
+				
+				<div id="feeds">
+					<ul>
+						<li><a href="中文书刊网-读者指引.html"><span><img src="img/index/color span.png" style="margin-right: 10px;"></span>读者指引</a></li>
+						<li><a href="中文书刊网-作者指引.html"><span><img src="img/index/color span1.png" style="margin-right: 10px;"></span>作者指引</a></li>
+					</ul>
+				</div>
+				<div id="user-signin">
+					<a href="中文书刊网-登录-注册.html"><span style="margin-right: 10px;">登录</span>|<span style="margin-left: 10px;">注册</span></a>
+				</div>
+			</header>
+			<div class="content-wrap">
+				<div class="content">
+					<div class="xiangqing">
+						<ul class="list-inline">
+							<li><a href="中文书刊网-首页.html">首页</a></li>
+							<li><img src="img/xiangqing/jiantou.png"></li>
+							<li><a href="中文书刊网-频道.html"><span>频道</span></a></li>
+							<li><img src="img/xiangqing/jiantou.png"></li>
+							<li><a href="#">书籍详情</a></li>
+						</ul>
+					</div>
+					<div class="jieyou">
+						<h2 class="pull-left">解忧杂货店</h2>
+						<ul class="list-inline pull-right">
+							<li><a href="#"><img src="img/xiangqing/love.png"></a></li>
+							<li><a href="#"><img src="img/xiangqing/down.png"></a></li>
+							<li><a href="#"><img src="img/xiangqing/fenxiang.png"></a></li>
+						</ul>
+					</div>
+					<div class="xiangqing1">
+						<div class="xiangqing1-img">
+							<img src="img/xiangqing/jieyou.png">
+						</div>
+						<div class="xiangqing1-middle">
+							<p>作者：<span style="margin-left: 5px;margin-right: 10px;">东野圭吾</span><span style="margin-left: 10px;margin-right: 10px;">类型：</span>悬疑推理<span style="margin-left: 5px;margin-right: 10px;">状态：</span>已完结<span style="margin-left: 5px;margin-right: 10px;">字数：</span>108.3万</p>
+							<div class="tiaoshu">
+								<img src="img/xiangqing/blue-like.png" style="margin-right: 10px;"><span>9.7(4348评论)<span style="margin-left: 20px;margin-right: 20px;">|</span>312938人在读</span>
+							</div>
+							<p>责任编辑：<span style="margin-left: 15px;">露露</span></p>
+							<p>出版社：<span style="margin-left: 15px;">新经典文化股份有限公司</span> </p>
+							
+							<ul class="list-inline">
+								<li>标签：</li>
+								<li>小说</li>
+								<li>外国 </li>
+								<li>日系</li>
+								<li>治愈 </li>
+								<li>推理</li>
+								<li>悬疑</li>
+								<li>催泪</li>
+								<li>救赎</li>
+							</ul>
+							<div class="xiangqing1-anniu">
+								<ul class="list-inline">
+									<li><a href="#"><button class="btn btn-info">开始阅读</button></a></li>
+									<li class="xiangqing1-border"><a href="#"><span style="margin-right: 10px;"><img src="img/xiangqing/shujia.png"></span>加入书架</a></li>
+									<li class="xiangqing1-border1"><a href="#"><span style="margin-right: 10px;"><img src="img/xiangqing/zan1.png"></span>赞</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="xiangqing1-mulu">
+						<ul class="list-inline">
+							<li class="border-right"><a href="#"><span style="margin-left: 20px;margin-right: 20px;">简介</span></a></li>
+							<li class="border-right1"><a href="#"><span style="margin-left: 20px;margin-right: 20px;">目录</span></a></li>
+							<li><a href="#"><span style="margin-left: 20px;margin-right: 20px;">评论</span></a></li>
+						</ul>
+					</div>
+					<div class="xiangqing1-jieshao">
+						<h4><span><img src="img/xiangqing/xiaoshuxian.png"></span><span style="margin-left: 20px;">图书简介</span></h4>
+						<p style="text-indent: 2em;">僻静的街道旁有一家杂货店，只要写下烦恼投进店前门卷帘门的投信口，第二天就会在店后的牛奶箱里得到回答：因男朋友身患绝症，年轻女孩静子在爱情与梦想间徘徊；克朗为了音乐梦想离家漂泊，却在现实中寸步难行；少年浩介面临家庭巨变，挣扎在亲情与未来的迷茫中··· ····他们将困惑写成信投进杂货店，奇妙的事情随即不断发生。生命中的一次偶然交会，将如何演绎粗截然不同的人生？</p>
+						<div class="xiangqing1-zhang">
+							<h4>目录(共5章)</h4>
+							<table class="table ">
+							    <thead>
+							        <tr>
+								         <th><span style="margin-right: 10px;"><img src="img/xiangqing/xiaoshuxian.png"></span>第一章  回答在牛奶箱里</th>
+								         <th></th>
+								         <th></th>
+							        </tr>
+							    </thead>
+							    <tbody>
+							        <tr>
+								         <td><a href="#">1</a></td>
+								         <td><a href="#">2</a></td>
+								         <td></td>
+							        </tr>
+							        <tr>
+								         <td><a href="#">3</a></td>
+								         <td><a href="#">4</a></td>
+								         <td></td>
+							        </tr>
+							        <tr>
+								         <td><a href="#">5</a></td>
+								         <td></td>
+								         <td></td>
+							        </tr>
+							    </tbody>
+							    <thead>
+							        <tr>
+								         <th><span style="margin-right: 10px;"><img src="img/xiangqing/xiaoshuxian.png"></span>第二章  深夜的口琴声</th>
+								         <th></th>
+								         <th></th>
+							        </tr>
+							    </thead>
+							    <tbody>
+							        <tr>
+								         <td><a href="#">1</a></td>
+								         <td><a href="#">2</a></td>
+								         <td></td>
+							        </tr>
+							        <tr>
+								         <td><a href="#">3</a></td>
+								         <td><a href="#">4</a></td>
+								         <td></td>
+							        </tr>
+							        <tr>
+								         <td><a href="#">5</a></td>
+								         <td><a href="#">6</a></td>
+								         <td></td>
+							        </tr>
+							        <tr>
+								         <td><a href="#">7</a></td>
+								         <td><a href="#">8</a></td>
+								         <td></td>
+							        </tr>
+							        <tr>
+								         <td><a href="#">9</a></td>
+								         <td><a href="#">10</a></td>
+								         <td></td>
+							        </tr>
+							    </tbody>
+							    <thead>
+							        <tr>
+								         <th><span style="margin-right: 10px;"><img src="img/xiangqing/xiaoshuxian.png"></span>第三章  在思域车上等到天亮</th>
+								         <th></th>
+								         <th></th>
+							        </tr>
+							    </thead>
+							    <tbody>
+							        <tr>
+								         <td><a href="#">1<span style="margin-left: 10px;"><img src="img/xiangqing/bottom.png"></span></a></td>
+								         <td><a href="#">2<span style="margin-left: 10px;"><img src="img/xiangqing/bottom.png"></span></a></td>
+								         <td></td>
+							        </tr>
+							        <tr>
+								         <td><a href="#">3<span style="margin-left: 10px;"><img src="img/xiangqing/bottom.png"></span></a></td>
+								         <td><a href="#">4<span style="margin-left: 10px;"><img src="img/xiangqing/bottom.png"></span></a></td>
+								         <td></td>
+							        </tr>
+							        <tr>
+								         <td><a href="#">5<span style="margin-left: 10px;"><img src="img/xiangqing/bottom.png"></span></a></td>
+								         <td><a href="#">6<span style="margin-left: 10px;"><img src="img/xiangqing/bottom.png"></span></a></td>
+								         <td></td>
+							        </tr>
+							        <tr>
+								         <td><a href="#">7<span style="margin-left: 10px;"><img src="img/xiangqing/bottom.png"></span></a></td>
+								         <td></td>
+								         <td></td>
+							        </tr>
+							        <tr>
+								         <td></td>
+								         <td></td>
+								         <td></td>
+							        </tr>
+							    </tbody>
+							</table>
+							<h5><a href="#">查看更多目录<span style="margin-left: 10px;"><img src="img/xiangqing/look-more.png"></span></a></h5>
+							<h4 style="padding-top: 30px;">图书评论</h4>
+							<div class="pinglun">
+								<div class="pinglun-left pull-left">
+									<p>综合得分<span style="margin-left: 10px;margin-right: 10px;"><img src="img/xiangqing/blue-like.png"></span><span>9.7</span></p>
+								</div>
+								<div class="pinglun-right pull-right">
+									<p>5星<span style="margin-left: 10px;margin-right: 10px;"><img src="img/xiangqing/five-blue.png"></span><span>3700人</span></p>
+									<p>4星<span style="margin-left: 10px;margin-right: 10px;"><img src="img/xiangqing/four-blue.png"></span><span>1200人</span></p>
+									<p>3星<span style="margin-left: 10px;margin-right: 10px;"><img src="img/xiangqing/three-blue.png"></span><span>90人</span></p>
+									<p>2星<span style="margin-left: 10px;margin-right: 10px;"><img src="img/xiangqing/two-blue.png"></span><span>12人</span></p>
+									<p>1星<span style="margin-left: 10px;margin-right: 20px;"><img src="img/xiangqing/one-blue.png"></span><span>8人</span></p>
+								</div>
+							</div>
+							<div class="pinglun-1">
+								<div class="pull-left pinglun-1-left">
+									共328条评论
+								</div>
+								<div class="pull-right pinglun-1-right">
+									<ul class="list-inline">
+										<li style="width: 66px;height: 21px;background-color: #eeeeee;"><a href=".zuixin" data-toggle="tab">最新排序</a></li>
+										<li style="width: 66px;height: 21px;background-color: white;border:  solid 1px #eeeeee;"><a href=".zuire" data-toggle="tab">最热排序</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="zuixin fade in active">
+								<div class="zuixin1">
+									<div class="zuixin1-left pull-left">
+										<img src="img/xiangqing/user-logo.png">
+									</div>
+									<div class="zuixin1-right pull-right">
+										<p>此花开尽更无花</p>
+										<p>有人说过，当一个人的悲伤太过盛大时，眼泪是掉下来而不是流出来的，我曾因你而如此。可是现在，每一首歌，我都听成....</p>
+										<div class="zuixin-bottom">
+											<div class="zuixin-bottom-left pull-left">47分钟前<span style="margin-left: 10px;margin-right: 10px;">|</span><a href="#">举报</a></div>
+											<div class="zuixin-bottom-right pull-right"><span><img src="img/xiangqing/zan.png"></span><sapn style="margin-left: 10px;margin-right: 10px;">0赞</sapn>|<span style="margin-left: 10px;"><a href="#"><img src="img/xiangqing/pinglun.png"></a></span></div>
+										</div>
+									</div>
+								</div>
+								<div class="zuixin1">
+									<div class="zuixin1-left pull-left">
+										<img src="img/xiangqing/user-logo.png">
+									</div>
+									<div class="zuixin1-right pull-right">
+										<p>垫脚-慢半步</p>
+										<p>原来，我以为自己可以很潇洒，可以旁若无人的与那个人牵手，我以为爱不上她。但是，当那个人一声不响从我身边消失时，我竟然没有心痛的感觉，可是，当我对她那么残忍的说，我会忘记你的时候，我的呼呼突然间艰难，我很想哭出声来，直到现在，</p>
+										<div class="huifu">
+											<p>回复<span style="margin-left: 5px;margin-right: 5px;">小鲨鱼</span>:原来，我以为自己可以很潇洒，可以旁若无人的与那个人牵手，我以为爱不上她。但是，当那个人一声不响从我身边消失时，我竟然没有心痛的感觉，可是，当我对她那么残忍的说，我会忘记你的时候，我的呼呼突然间艰难，我很想哭出声来，直到现在，</p>
+										</div>
+										<div class="zuixin-bottom">
+											<div class="zuixin-bottom-left pull-left">5月前<span style="margin-left: 10px;margin-right: 10px;">|</span><a href="#">举报</a></div>
+											<div class="zuixin-bottom-right pull-right"><span><img src="img/xiangqing/zan.png"></span><sapn style="margin-left: 10px;margin-right: 10px;">0赞</sapn>|<span style="margin-left: 10px;"><span><a href="#"><img src="img/xiangqing/pinglun.png"></a></span></div>
+										</div>
+									</div>
+								</div>
+								<div class="zuixin1">
+									<div class="zuixin1-left pull-left">
+										<img src="img/xiangqing/user-logo.png">
+									</div>
+									<div class="zuixin1-right pull-right">
+										<p>duihd</p>
+										<p>我终于理解，崩溃是怎样的一种心境。曾经有个女孩子对我说，失去你我会崩溃的，不要离开我。那时，我以为崩溃就是水流出来的声音，我以为那声音很快便会静止，</p>
+										<div class="zuixin-bottom">
+											<div class="zuixin-bottom-left pull-left">5月前<span style="margin-left: 10px;margin-right: 10px;">|</span><a href="#">举报</a></div>
+											<div class="zuixin-bottom-right pull-right"><span><img src="img/xiangqing/zan.png"></span><sapn style="margin-left: 10px;margin-right: 10px;">0赞</sapn>|<span style="margin-left: 10px;"><span><a href="#"><img src="img/xiangqing/pinglun.png"></a></span></div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<div class="zuire fade ">
+								<div>
+									
+								</div>
+							</div>
+							<h5><a href="#">查看更多评论<span style="margin-left: 10px;"><img src="img/xiangqing/look-more.png"></span></a></h5>
+							<div class="pinglunqu">
+								<p>评论(30)</p>
+								<form class="form-inline" role="form">
+	                            	<div class="form-group">
+	                                   
+	                                    <textarea class="form-control" style="width:700px;height:190px;">
+	                                    </textarea>
+	                                    
+	                                </div>
+                            	</form>
+								<a href="#" ><button class="btn btn-info">发布</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar">
+				<div class="widget">
+					<div class="writer">
+						<h3 class="title2">
+							<strong>本书作者</strong>
+						</h3>
+						<div class="writer1">
+							<a href="#"><img src="img/xiangqing/main-logo.png"></a>
+							<p>东野圭吾</p>
+						</div>
+						<h5>日本推理小说作家。毕业于大阪府立大学电气工学专业，之后在汽车零件供应商日本电装担任生产技术工程师，并进行推理小说的创作。1985年，凭借《放学后》获得第31回江户川乱步奖，从此开始专职写作。</h5>
+						<div class="writer2">
+							<p class="shuji pull-left">28<br>书籍</p>
+							<p class="huozan pull-right">1096<br>获赞</p>
+						</div>
+						<a href="#" class="zhuyeone"><button class="btn" style="color: white;font-size: 16px;">进入主页</button></a>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="writer">
+						<h3 class="title2">
+							<strong>看过的人还看</strong>
+						</h3>
+						<div class="look">
+							<div class="look1">
+								<div class="look1-left">1</div>
+								<div class="look1-right">
+									<div class="look1-right1">
+										翻译官
+									</div>
+									<div class="look1-right2">
+										<span><img src="img/xiangqing/eye1.png"></span>16998
+									</div>
+								</div>
+								<div class="look-img">
+									
+								</div>
+							</div>
+							<div class="look1">
+								<div class="look1-left">2</div>
+								<div class="look1-right">
+									<div class="look1-right1">
+										最好的我们(合集)
+									</div>
+									<div class="look1-right2">
+										<span><img src="img/xiangqing/eye1.png"></span>1622
+									</div>
+								</div>
+							</div>
+							<div class="look1">
+								<div class="look1-left">3</div>
+								<div class="look1-right">
+									<div class="look1-right1">
+										明朝那些事儿大合集
+									</div>
+									<div class="look1-right2">
+										<span><img src="img/xiangqing/eye1.png"></span>1398
+									</div>
+								</div>
+							</div>
+							<div class="look1">
+								<div class="look1-left">4</div>
+								<div class="look1-right">
+									<div class="look1-right1">
+										最好的我们(下)
+									</div>
+									<div class="look1-right2">
+										<span><img src="img/xiangqing/eye1.png"></span>1998
+									</div>
+								</div>
+							</div>
+							<div class="look1">
+								<div class="look1-left">5</div>
+								<div class="look1-right">
+									<div class="look1-right1">
+										欢乐颂典藏版
+									</div>
+									<div class="look1-right2">
+										<span><img src="img/xiangqing/eye1.png"></span>1698
+									</div>
+								</div>
+							</div>
+							<div class="look1">
+								<div class="look1-left">6</div>
+								<div class="look1-right">
+									<div class="look1-right1">
+										我不喜欢这世界，我...
+									</div>
+									<div class="look1-right2">
+										<span><img src="img/xiangqing/eye1.png"></span>998
+									</div>
+								</div>
+							</div>
+							<div class="look1">
+								<div class="look1-left">7</div>
+								<div class="look1-right">
+									<div class="look1-right1">
+										欢乐颂(第二季)
+									</div>
+									<div class="look1-right2">
+										<span><img src="img/xiangqing/eye1.png"></span>1427
+									</div>
+								</div>
+							</div>
+							<div class="more-wenzhang">
+								<a href="#">更多文章<span style="margin-left: 10px;"><img src="img/xiangqing/morewen.png"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="widget">
+					<h3 class="title">
+						<strong>关注我们</strong>
+					</h3>
+					<p>扫扫二维码，下载中文书刊网APP客户端</p>
+					<div class="title-img"><img src="img/index/erweima.png"></div>
+					<div class="widget-bottom">
+						<ul class="list-inline">
+							<li><a href="#"><img src="img/index/app.png"></a></li>
+							<li><a href="#"><img src="img/index/weibo.png"></a></li>
+							<li><a href="#"><img src="img/index/weixin.png"></a></li>
+						</ul>
+					</div>
+					<div class="number"><p style="margin: 0;">服务监督热线：0591-83368793</p><p style="margin: 0;">客服邮箱：325122081@qq.com</p></div>
+				</div>
+				
+			</div>
+			<footer class="footer">
+				<div class="footer-top">
+					<ul class="list-inline">
+						<li><a href="#" style="margin-right: 10px;"><img src="img/index/left.png"></a></li>
+						<li><a href="http://www.fjwyw.com " style="margin-right: 10px;">福建文艺网</a></li>
+						<li><a href="http://www.hxwy.org" style="margin-right: 10px;">海峡文艺网</a></li>
+						<li><a href="http://www.fjmj.org/" style="margin-right: 10px;">福建民进</a></li>
+						<li><a href="http://www.mdwhyjh.com/" style="margin-right: 10px;">闽都文化研究所</a></li>
+						<li><a href="http://yuedu.baidu.com/" style="margin-right: 10px;">百度阅读</a></li>
+						<li><a href="#"><img src="img/index/right.png"></a></li>
+					</ul>
+				</div>
+				<div class="footer-middle">
+					
+						<ul class="list-inline">
+							<li><a href="中文书刊网-关于我们.html" style="margin-right: 10px;">关于我们</a>|</li>
+							<li><a href="中文书刊网-使用帮助.html" style="margin-right: 10px;">使用帮助</a>|</li>
+							<li><a href="中文书刊网-免责声明.html" style="margin-right: 10px;">免责声明</a>|</li>
+							<li><a href="中文书刊网-出版单位.html" style="margin-right: 10px;">出版单位</a>|</li>
+							<li><a href="中文书刊网-联系我们.html" style="margin-right: 10px;">联系我们</a>|</li>
+							<li><a href="中文书刊网-隐私保护.html" style="margin-right: 10px;">隐私保护</a>|</li>
+							<li><a href="中文书刊网-招贤纳士.html">招贤纳士</a></li>
+						</ul>
+					<p><span style="margin-right: 5px;">版权所有</span> <span style="margin-right: 5px;">中文书刊网</span> <span style="margin-right: 5px;">Copyright2010-2015</span> <span style="margin-right: 5px;">http://www.zwskw.com</span> <span style="margin-right: 5px;">All Rights Reservsd.</span> 闽ICP备10002312号 </p>
+				</div>
+			</footer>
+			<div class="write">
+				<div class="write-top" style="display: block;"><a href="#"></a></div>
+				<div class="write-bottom" style="display: block;"><a href="#top"></a></div>
+			</div>
+		</section>
+	</body>
+</html>
+
